@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreteFrito</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main
+      class="relative bg-gradient-to-tr from-indigo-500 via-violet-600 to-blue-500 h-screen flex justify-center items-center flex-col gap-20"
+    >
+      <img
+        class="w-24 rounded-full absolute top-20 shadow-lg"
+        src="./a_logo_of_a_amazon_box_on_fire.jpeg"
+        alt=""
+      />
+      <div
+        class="relative bg-white px-10 py-10 rounded-3xl flex flex-col gap-12 shadow-lg z-10 q"
+      >
+        <h1 class="font-poppins text-center text-2xl uppercase font-[800]">
+          Digite seu CEP
+        </h1>
+        <input
+          id="cep"
+          class="border-2 p-2 rounded-lg focus:outline-none"
+          type="text"
+          placeholder="*****-***"
+        />
+        <button
+          id="consultaCep"
+          class="bg-violet-700 text-white px-1 py-3 font-[600] rounded-lg hover:bg-violet-500"
+        >
+          Consultar
+        </button>
+        <div
+          id="resultadosCep"
+          class="flex flex-col text-center bg-white text-violet-700 p-4 shadow-md rounded-3xl hidden"
+        >
+          <h2 id="local" class="text-2xl font-[600]"></h2>
+          <p id="rua" class="text-1xl font-[500]"></p>
+          <h3 id="estado" class="text-3xl font-[500]"></h3>
+        </div>
+        <div>
+          <span id="erros" class="hidden text-red-500 font-[800]"> </span>
+        </div>
+      </div>
+      <img
+        class="min-w-[600px] max-w-[800px] absolute w-6/12 z-0 opacity-85"
+        src="./assets/Ecommerce checkout laptop-bro.svg"
+        alt=""
+      />
+    </main>
+  </body>
+</html>
